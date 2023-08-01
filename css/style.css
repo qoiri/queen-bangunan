@@ -1,0 +1,264 @@
+:root {
+  --primary: blue;
+  --bg: rgb(248, 248, 8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  tex-decoration: none;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  background-color: var(--bg);
+  color: black;
+  /*min-height: 3000px;*/
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 7%;
+  margin-left: -5%;
+
+  background-color: rgb(200, 246, 241);
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-nav a {
+  color: BLACK;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0.4rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid white;
+  transform: scalex(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: rgb(246, 5, 5);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+#hamburger-menu {
+  display: none;
+}
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/shoping.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  /* background: linear-gradient(0deg, rgb(1, 1, 3) 3%, rgba(26, 255, 0, 0) 25%); */
+}
+.hero .content {
+  padding: 2rem 4%;
+  max-width: 50rem;
+  display: flex;
+}
+.logo1 {
+  display: block;
+  font: bold;
+  font-size: larger;
+  color: white;
+  position: absolute;
+  top: 15%;
+  width: 10%;
+  height: 5%;
+  left: 75%;
+}
+.logo2 {
+  display: block;
+  font: bold;
+  color: white;
+  position: absolute;
+  top: 20%;
+  width: 10%;
+  height: 5%;
+  right: 7.5%;
+}
+.hero .content h1 {
+  font-size: 5rem;
+  color: blue;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: yellow;
+}
+
+.hero .content p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 1.4rem;
+  font-weight: 100%;
+  text-shadow: 1px 1px 2px rgba(7, 7, 201, 0.981);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: blue;
+  background-color: wheat;
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section*/
+.about {
+  padding: 5rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.about .row {
+  display: flex;
+}
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+.about .row .about-img img {
+  width: 90%;
+  height: 50%;
+}
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about .row .content p {
+  margin-bottom: 0.9rem;
+  font-style: oblique;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+}
+/* Categori section */
+.CATEGORI h2 {
+  margin-bottom: 1rem;
+  font-size: 10rem;
+}
+.CATEGORI p {
+  text-align: center;
+  font-size: 5Srem;
+  font-style: oblique;
+  max-width: 50rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+.CATEGORI H7 {
+  font-size: 5rem;
+  font-style: oblique;
+}
+.CATEGORI .row{
+  display: flex;
+  f
+}
+.CATEGORI .ROW1 .CATEGORI-CARD {
+  text-align: center;
+}
+.CATEGORI .row .CATEGORI-CARD .categori-card-title h5 {
+  font-size: 1rem;
+}
+
+.CATEGORI .row .CATEGORI-CARD .categori-card-price {
+  font-size: 1rems;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: black;
+    width: 30rem;
+    height: 100vh;
+    transition: 3sc;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+/* mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
